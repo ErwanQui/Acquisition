@@ -25,7 +25,8 @@
 					for(let i = 0; i < Object.keys(data).length; i++) {
 						htmlButton = document.createElement("input");
 						htmlButton.type = "button";
-						htmlButton.value = Object.keys(data)[i]
+						htmlButton.value = Object.keys(data)[i];
+						htmlButton.addEventListener("click", () => {CategoryChoose(Object.keys(data)[i]); });
 						document.getElementById("categoryName").appendChild(htmlButton);
 					}
 				})
@@ -73,7 +74,7 @@
 		</Using></div>
 		<div><Source>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-			<!-- <script src="Display.js"></script> -->
+			<script src="Display.js"></script>
 			<!-- <script src="Sound.js"></script> -->
 			<script>includeHTML();</script>
     	</Source></div>
