@@ -73,9 +73,9 @@ function CategoryChoose(name) {
 function ObjectChoose(name, index) {
 
 
-		fetch("Images/" + data[name][i][1]).then(results => results.json()).then((jsonData) => {
-		  // data = jsonData;
-		});
+		// fetch("Images/" + data[name][index][1]).then(results => results.json()).then((jsonData) => {
+		//   // data = jsonData;
+		// });
 		var detail = document.createElement("div");
 		detail.innerhtml = data[name][i][2];
 		// object.addEventListener("click", () => {CategoryChoose(Object.keys(data)[i]); });
