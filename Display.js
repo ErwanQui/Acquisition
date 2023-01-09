@@ -73,8 +73,8 @@ function CategoryChoose(name) {
 function ObjectChoose(name, index) {
 
 
-		fetch("Images/" + data[name][index][1]).then(results => results.blob()).then((imageBlob) => {
-		  var url = URL.createObjectURL(blob.slice(0, 4000))
+		fetch("Images/" + data[name][index][1] + ".jpg").then(results => results.blob()).then((imageBlob) => {
+		  var url = URL.createObjectURL(imageBlob.slice(0, 4000))
 
 		  var image = new Image()
 		  image.src = url
