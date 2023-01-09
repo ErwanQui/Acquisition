@@ -73,13 +73,22 @@ function CategoryChoose(name) {
 function ObjectChoose(name, index) {
 
 
-		// fetch("Images/" + data[name][index][1]).then(results => results.json()).then((jsonData) => {
-		//   // data = jsonData;
-		// });
+		fetch("Images/" + data[name][index][1]).then(results => results.blob()).then((imageBlob) => {
+		  var url = URL.createObjectURL(blob.slice(0, 4000))
+
+		  var image = new Image()
+		  image.src = url
+
+
+			document.getElementById("ObjectImage").innerHTML = "";
+			document.getElementById("ObjectImage").appendChild(image);
+
+		});
 		var detail = document.createElement("div");
 		console.log(data[name][index][2])
 		detail.innerHTML = data[name][index][2];
 		console.log(detail)
 		// object.addEventListener("click", () => {CategoryChoose(Object.keys(data)[i]); });
+		document.getElementById("ObjectDetails").innerHTML = "";
 		document.getElementById("ObjectDetails").appendChild(detail);
 }
