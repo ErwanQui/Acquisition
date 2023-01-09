@@ -1,6 +1,6 @@
 var data;
 
-fetch('/Data/data.json').then((jsonData) => {
+fetch("Data/data.json").then(results => results.json()).then((jsonData) => {
   data = jsonData;
 })
 
