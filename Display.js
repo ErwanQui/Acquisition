@@ -53,9 +53,9 @@
 // }
 
 function CategoryChoose(name) {
-	document.getElementById("CategoryName").style.visibilty = "hidden";
+	document.getElementById("CategoryName").style.visibility = "hidden";
 	document.getElementById("CategoryName").style.position = "absolute";
-	document.getElementById("ObjectsList").style.visibilty = "visible";
+	document.getElementById("ObjectsList").style.visibility = "visible";
 	document.getElementById("ObjectsList").style.position = "relative";
 	console.log(data.name)
 	var object;
