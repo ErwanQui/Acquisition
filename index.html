@@ -25,7 +25,7 @@
 					for(let i = 0; i < Object.keys(data).length; i++) {
 						htmlButton = document.createElement("input");
 						htmlButton.type = "button";
-						htmlButton.innerHtml = Object.keys(data)[i]
+						htmlButton.value = Object.keys(data)[i]
 						document.getElementById("categoryName").appendChild(htmlButton);
 					}
 				})
