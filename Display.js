@@ -78,7 +78,7 @@ function ObjectChoose(name, index) {
 		// });
 		var detail = document.createElement("div");
 		console.log(data[name][index][2])
-		detail.innerhtml = data[name][index][2];
+		detail.innerHTML = data[name][index][2];
 		console.log(detail)
 		// object.addEventListener("click", () => {CategoryChoose(Object.keys(data)[i]); });
 		document.getElementById("ObjectDetails").appendChild(detail);
