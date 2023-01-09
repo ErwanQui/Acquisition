@@ -20,6 +20,7 @@
 					console.log(Object.keys(data).length);
 					document.dispatchEvent(new Event("dataLoaded")); 
 					var htmlButton;
+					console.log(data[1])
 					for(let i = 0; i < Object.keys(data).length; i++) {
 						htmlButton = document.createElement("input");
 						htmlButton.type = "button";
