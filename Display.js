@@ -59,7 +59,7 @@ function CategoryChoose(name) {
 	document.getElementById("ObjectsList").style.position = "relative";
 	console.log(data.name)
 	var object;
-	for(let i = 0; i < data[name]length; i++) {
+	for(let i = 0; i < data[name].length; i++) {
 		object = document.createElement("input");
 		object.type = "button";
 		object.value = data[name][i][0];
