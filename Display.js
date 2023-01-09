@@ -77,7 +77,7 @@ function ObjectChoose(name, index) {
 		//   // data = jsonData;
 		// });
 		var detail = document.createElement("div");
-		detail.innerhtml = data[name][i][2];
+		detail.innerhtml = data[name][index][2];
 		// object.addEventListener("click", () => {CategoryChoose(Object.keys(data)[i]); });
 		document.getElementById("ObjectDetails").appendChild(detail);
 }
