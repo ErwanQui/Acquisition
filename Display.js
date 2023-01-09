@@ -4,7 +4,7 @@ fetch("euh.jpg").then(() => {
   console.log("hggg");
 })
 
-fetch("Acquisition/Data/data.json").then(results => results.json()).then((jsonData) => {
+fetch("Data/data.json").then(results => results.json()).then((jsonData) => {
   data = jsonData;
 })
 
