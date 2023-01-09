@@ -28,12 +28,13 @@ function includeHTML() {
 		      /* Make an HTTP request using the attribute value as the file name: */
 		      xhttp = new XMLHttpRequest();
 		      xhttp.onreadystatechange = function() {
-		        if (this.readyState == Object.keys(data).length) {
+		        if (this.readyState == 4) {
 		          if (this.status == 200) {
 
 		          	//on y passe nbSound fois pour avoir le nombre de blocs correspondants dans le code html
 
-		          	for (var j = 0; j < nbSound; j++) {
+		          	for (var j = 0; j < Object.keys(data).length; j++) {
+		          		console.log(this.responseText)
 		          		elmnt.innerHTML += this.responseText;	          	
 		          	}
 		          }
