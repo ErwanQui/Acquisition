@@ -31,7 +31,7 @@ function includeHTML() {
 		        if (this.readyState == 4) {
 		          if (this.status == 200) {
 
-		          	//on y passe nbSound fois pour avoir le nombre de blocs correspondants dans le code html
+		          	// on y passe nbSound fois pour avoir le nombre de blocs correspondants dans le code html
 
 		          	for (var j = 0; j < Object.keys(data).length; j++) {
 		          		console.log(this.responseText)
