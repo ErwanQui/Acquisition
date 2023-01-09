@@ -10,7 +10,22 @@
 	<body>
 		<h1>Test monoson avec position/orientation</h1>
 		<CategoryChoice>
-			<div class="BlocPos" w3-include-html="list.html"></div>
+			<!-- <div class="BlocPos" w3-include-html="list.html"></div> -->
+			<script>
+				fetch("Data/data.json").then(results => results.json()).then((jsonData) => {
+				  data = jsonData;
+
+					console.log(data);
+					console.log("et bah");
+					console.log(Object.keys(data).length);
+					document.dispatchEvent(new Event("dataLoaded")); 
+					for(let i = 0; i < Object.keys(data).length; i++) {
+						var htmlButton = document.createElement("input");
+						htmlButton.type = "button";
+						htmlButton.innerHtml = data[i]
+					}
+				})
+			</script>
 		<div class="BeginButton"><BeginButton>
 <!-- 			<button id="BeginButton" type = "submit" onclick="Display()">
 				<h4>Commencer</h4>
@@ -33,7 +48,7 @@
 				</select>
 			</NbAudio></div>
 			<h4>Position des audios</h4>
-			<div class="BlocPos" w3-include-html="list.html"></div>
+			<!-- <div class="BlocPos" w3-include-html="list.html"></div> -->
 			<h4>Orientation de l'utilisateur</h4>
 			<div class="Orientation"><Orientation>
 				<libellé>Orientation</libellé>
