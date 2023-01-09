@@ -32,8 +32,14 @@
 				})
 			</script>
 		</CategoryChoice>
-		<ObjectsList id="ObjectsList" style="visibility: hidden; position: absolute; display: flex; flex-direction: column;">
-		</ObjectsList>
+		<Object id="Object" style="visibility: hidden; position: absolute;">
+			<ObjectsList id="ObjectsList" style="position: absolute; display: flex; flex-direction: column; transform: translateX(-100px);">
+			</ObjectsList>
+			<Image id="ObjectImage" style="position: absolute; transform: translate(100px, -100px);">
+			</Image>
+			<Details id="ObjectDetails" style="position: absolute; transform: translate(100px, 100px);">
+			</Details>
+		</Object>
 		<!-- <div class="BeginButton"><BeginButton>
  			<button id="BeginButton" type = "submit" onclick="Display()">
 				<h4>Commencer</h4>
