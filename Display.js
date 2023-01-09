@@ -6,11 +6,12 @@ fetch("euh.jpg").then(() => {
 
 fetch("Data/data.json").then(results => results.json()).then((jsonData) => {
   data = jsonData;
-})
 
 console.log(data);
 console.log("et bah");
-console.log(Object.keys(data).length);
+console.log(Object.keys(data).length);  
+})
+
 
 // include html
 function includeHTML() {
