@@ -63,7 +63,7 @@ function CategoryChoose(name) {
 		object = document.createElement("input");
 		object.type = "button";
 		object.value = data[name][i][0];
-		object.addEventListener("click", () => {CategoryChoose(Object.keys(data)[i]); });
+		object.addEventListener("click", () => {ObjectChoose(name, i); });
 		document.getElementById("ObjectsList").appendChild(object);
 	}
 	console.log(data);
