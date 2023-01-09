@@ -5,6 +5,7 @@ fetch('/Data/data.json').then((jsonData) => {
 })
 
 console.log(data);
+console.log("et bah");
 console.log(Object.keys(data).length);
 
 // include html
