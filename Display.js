@@ -52,7 +52,7 @@
 // 	})
 // }
 
-function CategroyChoose(name) {
+function CategoryChoose(name) {
 	console.log(data);
 	console.log(name);
 }
