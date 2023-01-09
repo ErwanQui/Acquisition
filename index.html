@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<h1>Test monoson avec position/orientation</h1>
-		<CategoryChoice id ="categoryName">
+		<CategoryChoice id ="CategoryName">
 			<!-- <div class="BlocPos" w3-include-html="list.html"></div> -->
 			<script>
 				fetch("Data/data.json").then(results => results.json()).then((jsonData) => {
@@ -27,7 +27,7 @@
 						htmlButton.type = "button";
 						htmlButton.value = Object.keys(data)[i];
 						htmlButton.addEventListener("click", () => {CategoryChoose(Object.keys(data)[i]); });
-						document.getElementById("categoryName").appendChild(htmlButton);
+						document.getElementById("CategoryName").appendChild(htmlButton);
 					}
 				})
 			</script>
