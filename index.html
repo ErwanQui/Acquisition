@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<h1>Test monoson avec position/orientation</h1>
-		<CategoryChoice>
+		<CategoryChoice id ="categoryName">
 			<!-- <div class="BlocPos" w3-include-html="list.html"></div> -->
 			<script>
 				fetch("Data/data.json").then(results => results.json()).then((jsonData) => {
@@ -19,10 +19,12 @@
 					console.log("et bah");
 					console.log(Object.keys(data).length);
 					document.dispatchEvent(new Event("dataLoaded")); 
+					var htmlButton;
 					for(let i = 0; i < Object.keys(data).length; i++) {
-						var htmlButton = document.createElement("input");
+						htmlButton = document.createElement("input");
 						htmlButton.type = "button";
 						htmlButton.innerHtml = data[i]
+						document.getElementById("categoryName").appendChild(htmlButton);
 					}
 				})
 			</script>
