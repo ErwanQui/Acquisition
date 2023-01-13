@@ -12,7 +12,8 @@
 // console.log(Object.keys(data).length);
 // document.dispatchEvent(new Event("dataLoaded"));  
 // })
-
+console.log(window.innerWidth);
+console.log(window.innerHeight);
 
 // // include html
 // function includeHTML() {
@@ -52,6 +53,25 @@
 // 	})
 // }
 
+function resize() {
+	document.getElementById("ObjectsList").style.transform = "translateX(" + window.innerWidth*(1/5) + "px)";
+	document.getElementById("ObjectImage").style.width = window.innerWidth/2 + "px";
+	document.getElementById("ObjectImage").style.height = window.innerHeight/2 + "px";
+	if (document.getElementById("Image") != null) {
+		document.getElementById("Image").style.width = window.innerWidth*(2/5) + "px";
+		document.getElementById("Image").style.height = window.innerHeight/2 + "px";
+	}
+	console.log(document.getElementById("ObjectImage"));
+	console.log(document.getElementById("ObjectImage").style.width);
+	console.log("terrr");
+	document.getElementById("ObjectDetails").style.transform = "translateY(" + window.innerHeight/2 + "px)";
+}
+
+resize();
+window.addEventListener('resize', () => {resize()});
+
+console.log("vavv");
+
 function CategoryChoose(name) {
 	document.getElementById("CategoryName").style.visibility = "hidden";
 	document.getElementById("CategoryName").style.position = "absolute";
@@ -78,6 +98,9 @@ function ObjectChoose(name, index) {
 
 		  var image = new Image()
 		  image.src = url
+		  image.id = "Image"
+		  image.width = window.innerWidth*(2/5);
+		  image.height = window.innerHeight/2
 
 
 			document.getElementById("ObjectImage").innerHTML = "";
